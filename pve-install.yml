@@ -71,13 +71,13 @@
           - github3.py
     - name: Get latest release of a public repository
       community.general.github_release:
-        user: natankeddem
+        user: "{{ github_user }}"
         repo: "{{ app_name }}"
         action: latest_release
       register: repo
     - name: Clone repo...
       ansible.builtin.git:
-        repo: "https://github.com/natankeddem/{{ app_name }}.git"
+        repo: "https://github.com/{{ github_user }}/{{ app_name }}.git"
         dest: /root/{{ app_name }}
         version: "{{ repo.tag }}"
     - name: "Install pip packages required by {{ app_name }}..."

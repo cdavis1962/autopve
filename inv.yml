@@ -7,6 +7,7 @@ all:
   vars:
     ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
     ansible_user: root
+    github_user: cdavis1962
     proxmox_api_password: ##PASSWORD##
     proxmox_api_user: root@pam
     proxmox_node: ##PROXMOXNODE##
