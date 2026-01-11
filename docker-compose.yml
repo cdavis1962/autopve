@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   autopve:
-    image: cdavis1962/autopve:latest
+    image: ghcr.io/natankeddem/autopve:latest
     ports:
       - 8080:8080
     volumes:
